@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String operand = "";
 
   buttonPressed(String buttonText) {
-    if (buttonText == "CLEAR") {
+    if (buttonText == "C") {
       _output = "0";
       num1 = 0.0;
       num2 = 0.0;
@@ -47,6 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
       setState(() {
         numb1 = num1.toString();
+        _isSee = false;
+        numb2 = "";
       });
       operand = buttonText;
 
@@ -183,7 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 buildButton("+")
               ]),
               new Row(children: [
-                buildButton("CLEAR"),
+                buildButton("C"),
                 buildButton("="),
               ])
             ])
