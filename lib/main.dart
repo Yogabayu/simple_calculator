@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demo Calculator',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _output = "0";
     } else if (buttonText == ".") {
       if (_output.contains(".")) {
-        print("Already conatains a decimals");
+        print("Maaf sudah ada koma");
         return;
       } else {
         _output = _output + buttonText;
